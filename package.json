@@ -1,0 +1,43 @@
+{
+  "name": "shopware-node-api",
+  "version": "0.0.1",
+  "description": "Shopware node api",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-mocha": "^4.9.0",
+    "mocha": "^3.4.2",
+    "pre-push": "^0.1.1"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "mocha index.test.js",
+    "lint": "eslint *.js"
+  },
+  "pre-push": [
+    "lint",
+    "test:unit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zenfulfillment/shopware-node-api.git"
+  },
+  "keywords": [
+    "shopware",
+    "node",
+    "api"
+  ],
+  "author": "Zenfulfillment",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenfulfillment/shopware-node-api/issues"
+  },
+  "homepage": "https://github.com/zenfulfillment/shopware-node-api#readme"
+}
