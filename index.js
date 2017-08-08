@@ -1,3 +1,4 @@
+const Promise = require('bluebird');
 const request = require('request-promise');
 const _ = require('lodash');
 
@@ -13,7 +14,7 @@ module.exports = function ShopwareAPI({user, host, apiKey} = {}) {
   function _request(args) {
     return request.defaults({
       baseUrl: `${host}/api/`,
-      timeout: 30000,
+      // timeout: 30000,
       json: true,
       headers: {
         'User-Agent': 'Shopware API Client',
