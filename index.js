@@ -14,7 +14,7 @@ module.exports = function ShopwareAPI({user, host, apiKey} = {}) {
   function _request(args) {
     return request.defaults({
       baseUrl: `${host}/api/`,
-      // timeout: 30000,
+      timeout: 30000,
       json: true,
       headers: {
         'User-Agent': 'Shopware API Client',
@@ -22,8 +22,7 @@ module.exports = function ShopwareAPI({user, host, apiKey} = {}) {
       },
       auth: {
         user,
-        pass: apiKey,
-        sendImmediately: false
+        pass: apiKey
       }
     })(args).promise();
   }
